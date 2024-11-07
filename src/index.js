@@ -2,14 +2,40 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./output.css";
+import Error from "./components/Error";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Dashboard from "./components/Dashboard";
+import Team from "./components/Team";
+import Contacts from "./components/Contacts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Dashboard />,
+      },
+      {
+        path: "/team",
+        element: <Team />,
+      },
+      {
+        path: "/contacts",
+        element: <Contacts />,
+      },
+    ],
+  },
+]);
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={appRouter} />
   </React.StrictMode>
 );
 
