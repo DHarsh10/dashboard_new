@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { mockDataContacts } from "../data/data";
 import { useTheme } from "@emotion/react";
 import { tokens } from "../theme";
@@ -61,7 +61,7 @@ const Contacts = () => {
       <Box>
         <Box
           sx={{
-            height: "70vh",
+            height: "67vh",
             width: "100%",
             "& .MuiDataGrid-columnHeader": {
               backgroundColor: colors.blueAccent[700],

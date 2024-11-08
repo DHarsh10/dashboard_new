@@ -11,6 +11,7 @@ import Dashboard from "./components/Dashboard";
 import Team from "./components/Team";
 import Contacts from "./components/Contacts";
 import Invoices from "./components/Invoices";
+import ProfileForm from "./components/ProfileForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const appRouter = createBrowserRouter([
@@ -34,6 +35,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/invoices",
         element: <Invoices />,
+      },
+      {
+        path: "/form",
+        element: <ProfileForm />,
       },
     ],
   },
