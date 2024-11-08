@@ -45,3 +45,17 @@ body,
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.css-1gak8h1-MuiToolbar-root-MuiTablePagination-toolbar,
+.css-15lx25q-MuiDataGrid-footerContainer {
+  display: none !important;
+}
+
+.rightContainer {
+  width: calc(100% - 250px);
+  /* transition: 1s; */
+}
+.rightContainerFS {
+  width: calc(100% - 20px);
+  /* transition: 1s; */
+}

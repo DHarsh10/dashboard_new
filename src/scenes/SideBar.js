@@ -1,8 +1,9 @@
-import { React, useState } from "react";
+import { React, useContext } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, Typography, IconButton, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../theme";
+import SideBarStatus from "../utils/contexts/sideBarStatus";
 
 import { menuItems } from "../data/sidebarData";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
@@ -10,7 +11,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 const SideBar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const { isCollapsed, setIsCollapsed } = useContext(SideBarStatus);
 
   return (
     <Box className="h-full">
@@ -76,7 +77,7 @@ const SideBar = () => {
                 >
                   Harshith
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
+                <Typography variant="h5" color={colors.greenAccent[400]}>
                   VP Fancy Admin
                 </Typography>
               </Box>
